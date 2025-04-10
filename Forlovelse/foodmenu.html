@@ -5,130 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elegant Food Menu</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Food Menu</h1>
   <div class="menu-container">
-    <!-- Common -->
     <div class="card common">
-      <h2>Common</h2>
-      <div class="section">
+      <h2>Common Items</h2>
+      <section>
         <h3>Starters</h3>
-        <ul>
-          <li><span class="text">Pickle</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Salad</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+        <ul class="editable-list">
+          <li><span class="text">Pickle</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Salad</span> <span class="actions">✏️ 🗑️</span></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+      </section>
+      <section>
         <h3>Mains</h3>
-        <ul>
-          <li><span class="text">Rumali Roti</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Ghee Rice</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">White Rice</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Papad</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+        <ul class="editable-list">
+          <li><span class="text">Rumali Roti</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Ghee Rice</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">White Rice</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Papad</span> <span class="actions">✏️ 🗑️</span></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+      </section>
+      <section>
         <h3>Dessert</h3>
-        <ul>
-          <li><span class="text">Kheer/Holige</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Buttermilk</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Ice Cream</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+        <ul class="editable-list">
+          <li><span class="text">Kheer/Holige</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Buttermilk</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Ice Cream</span> <span class="actions">✏️ 🗑️</span></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </div>
+      </section>
     </div>
 
-    <!-- Veg -->
     <div class="card veg">
-      <h2>Veg</h2>
-      <div class="section">
+      <h2>Veg Items</h2>
+      <section>
         <h3>Starters</h3>
-        <ul>
-          <li><span class="text">Upkari</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+        <ul class="editable-list">
+          <li><span class="text">Upkari</span> <span class="actions">✏️ 🗑️</span></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+      </section>
+      <section>
         <h3>Mains</h3>
-        <ul>
-          <li><span class="text">Rasam</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+        <ul class="editable-list">
+          <li><span class="text">Rasam</span> <span class="actions">✏️ 🗑️</span></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </div>
+      </section>
     </div>
 
-    <!-- Non-Veg -->
     <div class="card nonveg">
-      <h2>Non-Veg</h2>
-      <div class="section">
+      <h2>Non-Veg Items</h2>
+      <section>
         <h3>Starters</h3>
-        <ul>
-          <li><span class="text">Chicken Sukka</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Chicken Kabab</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Anjal Fry</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+        <ul class="editable-list">
+          <li><span class="text">Chicken Sukka</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Chicken Kabab</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Anjal Fry</span> <span class="actions">✏️ 🗑️</span></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+      </section>
+      <section>
         <h3>Mains</h3>
-        <ul>
-          <li><span class="text">Kori Rotti</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Chicken Curry</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
-          <li><span class="text">Mutton Gravy</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+        <ul class="editable-list">
+          <li><span class="text">Kori Rotti</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Chicken Curry</span> <span class="actions">✏️ 🗑️</span></li>
+          <li><span class="text">Mutton Gravy</span> <span class="actions">✏️ 🗑️</span></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </div>
+      </section>
     </div>
   </div>
 
   <script>
-    document.querySelectorAll('.edit').forEach(icon => {
-      icon.addEventListener('click', () => {
-        const span = icon.parentElement.querySelector('.text');
-        const input = document.createElement('input');
-        input.value = span.textContent;
-        input.addEventListener('blur', () => {
-          span.textContent = input.value;
-          span.style.display = '';
-          input.remove();
-        });
-        span.style.display = 'none';
-        icon.parentElement.insertBefore(input, span);
-        input.focus();
-      });
-    });
-
-    document.querySelectorAll('.delete').forEach(icon => {
-      icon.addEventListener('click', () => {
-        icon.parentElement.remove();
+    document.querySelectorAll('.actions').forEach(action => {
+      action.addEventListener('click', function (e) {
+        const li = this.parentElement;
+        if (e.target.textContent === '✏️') {
+          const span = li.querySelector('.text');
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.value = span.textContent;
+          span.replaceWith(input);
+          input.focus();
+          input.addEventListener('blur', () => {
+            const newSpan = document.createElement('span');
+            newSpan.className = 'text';
+            newSpan.textContent = input.value;
+            input.replaceWith(newSpan);
+          });
+        } else if (e.target.textContent === '🗑️') {
+          li.remove();
+        }
       });
     });
 
     function addItem(button) {
-      const ul = button.previousElementSibling.querySelector('ul');
+      const ul = button.previousElementSibling;
       const li = document.createElement('li');
-      li.innerHTML = '<span class="text">New Item</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i>';
+      li.innerHTML = `<span class="text">New Item</span> <span class="actions">✏️ 🗑️</span>`;
       ul.appendChild(li);
-      li.querySelector('.edit').addEventListener('click', () => {
-        const span = li.querySelector('.text');
-        const input = document.createElement('input');
-        input.value = span.textContent;
-        input.addEventListener('blur', () => {
-          span.textContent = input.value;
-          span.style.display = '';
-          input.remove();
-        });
-        span.style.display = 'none';
-        li.insertBefore(input, span);
-        input.focus();
-      });
-      li.querySelector('.delete').addEventListener('click', () => {
-        li.remove();
+      const actions = li.querySelector('.actions');
+      actions.addEventListener('click', function (e) {
+        const li = this.parentElement;
+        if (e.target.textContent === '✏️') {
+          const span = li.querySelector('.text');
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.value = span.textContent;
+          span.replaceWith(input);
+          input.focus();
+          input.addEventListener('blur', () => {
+            const newSpan = document.createElement('span');
+            newSpan.className = 'text';
+            newSpan.textContent = input.value;
+            input.replaceWith(newSpan);
+          });
+        } else if (e.target.textContent === '🗑️') {
+          li.remove();
+        }
       });
     }
   </script>
