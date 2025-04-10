@@ -83,54 +83,45 @@
   </div>
 
   <script>
-    document.querySelectorAll('.actions').forEach(action => {
+  function initializeActions(list) {
+    list.querySelectorAll('.actions').forEach(action => {
       action.addEventListener('click', function (e) {
         const li = this.parentElement;
-        if (e.target.textContent === '✏️') {
+
+        if (e.target.textContent.includes('✏️')) {
           const span = li.querySelector('.text');
           const input = document.createElement('input');
           input.type = 'text';
           input.value = span.textContent;
+          input.className = 'edit-input';
           span.replaceWith(input);
           input.focus();
           input.addEventListener('blur', () => {
             const newSpan = document.createElement('span');
             newSpan.className = 'text';
-            newSpan.textContent = input.value;
+            newSpan.textContent = input.value.trim() || 'Unnamed Item';
             input.replaceWith(newSpan);
           });
-        } else if (e.target.textContent === '🗑️') {
+        }
+
+        if (e.target.textContent.includes('🗑️')) {
           li.remove();
         }
       });
     });
+  }
 
-    function addItem(button) {
-      const ul = button.previousElementSibling;
-      const li = document.createElement('li');
-      li.innerHTML = `<span class="text">New Item</span> <span class="actions">✏️ 🗑️</span>`;
-      ul.appendChild(li);
-      const actions = li.querySelector('.actions');
-      actions.addEventListener('click', function (e) {
-        const li = this.parentElement;
-        if (e.target.textContent === '✏️') {
-          const span = li.querySelector('.text');
-          const input = document.createElement('input');
-          input.type = 'text';
-          input.value = span.textContent;
-          span.replaceWith(input);
-          input.focus();
-          input.addEventListener('blur', () => {
-            const newSpan = document.createElement('span');
-            newSpan.className = 'text';
-            newSpan.textContent = input.value;
-            input.replaceWith(newSpan);
-          });
-        } else if (e.target.textContent === '🗑️') {
-          li.remove();
-        }
-      });
-    }
-  </script>
+  function addItem(button) {
+    const ul = button.previousElementSibling;
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="text">New Item</span> <span class="actions">✏️ 🗑️</span>`;
+    ul.appendChild(li);
+    initializeActions(ul);
+  }
+
+  // Initial setup
+  document.querySelectorAll('.editable-list').forEach(list => initializeActions(list));
+</script>
+
 </body>
 </html>
