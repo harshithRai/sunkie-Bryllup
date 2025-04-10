@@ -4,131 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Food Menu</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Food Menu</h1>
-  <div class="legend">
-    <span class="legend-box common"></span> Common
-    <span class="legend-box veg"></span> Veg
-    <span class="legend-box nonveg"></span> Non-Veg
-  </div>
-  <div class="menu-container">
-    <div class="card common">
-      <h2>Common</h2>
-      <div class="section">
-        <h3>Starters</h3>
-        <ul class="editable-list">
-          <li><span class="text">Pickle</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Salad</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
+  <div class="container">
+    <h1>Food Menu</h1>
+    <div class="cards">
+      <!-- Common Section -->
+      <div class="card common-card">
+        <h2>Common</h2>
+        <div class="section">
+          <h3>Starters</h3>
+          <ul>
+            <li><span class="text">Pickle</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Salad</span> <span class="icons">✏️ 🗑️</span></li>
+          </ul>
+          <button class="add-btn">+ Add Item</button>
+        </div>
+        <div class="section">
+          <h3>Mains</h3>
+          <ul>
+            <li><span class="text">Rumali Roti</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Ghee Rice</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">White Rice</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Papad</span> <span class="icons">✏️ 🗑️</span></li>
+          </ul>
+          <button class="add-btn">+ Add Item</button>
+        </div>
+        <div class="section">
+          <h3>Dessert</h3>
+          <ul>
+            <li><span class="text">Kheer/Holige</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Buttermilk</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Ice Cream</span> <span class="icons">✏️ 🗑️</span></li>
+          </ul>
+          <button class="add-btn">+ Add Item</button>
+        </div>
       </div>
-      <div class="section">
-        <h3>Mains</h3>
-        <ul class="editable-list">
-          <li><span class="text">Rumali Roti</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Ghee Rice</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">White Rice</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Papad</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
-        <h3>Dessert</h3>
-        <ul class="editable-list">
-          <li><span class="text">Kheer/Holige</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Buttermilk</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Ice Cream</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-    </div>
 
-    <div class="card veg">
-      <h2>Veg</h2>
-      <div class="section">
-        <h3>Starters</h3>
-        <ul class="editable-list">
-          <li><span class="text">Upkari</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
+      <!-- Veg Section -->
+      <div class="card veg-card">
+        <h2>Veg</h2>
+        <div class="section">
+          <h3>Starters</h3>
+          <ul>
+            <li><span class="text">Upkari</span> <span class="icons">✏️ 🗑️</span></li>
+          </ul>
+          <button class="add-btn">+ Add Item</button>
+        </div>
+        <div class="section">
+          <h3>Mains</h3>
+          <ul>
+            <li><span class="text">Rasam</span> <span class="icons">✏️ 🗑️</span></li>
+          </ul>
+          <button class="add-btn">+ Add Item</button>
+        </div>
       </div>
-      <div class="section">
-        <h3>Mains</h3>
-        <ul class="editable-list">
-          <li><span class="text">Rasam</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-    </div>
 
-    <div class="card nonveg">
-      <h2>Non-Veg</h2>
-      <div class="section">
-        <h3>Starters</h3>
-        <ul class="editable-list">
-          <li><span class="text">Chicken Sukka</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Chicken Kabab</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Anjal Fry</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
-        <h3>Mains</h3>
-        <ul class="editable-list">
-          <li><span class="text">Kori Rotti</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Chicken Curry</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Mutton Gravy</span><span class="actions"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
+      <!-- Non-Veg Section -->
+      <div class="card nonveg-card">
+        <h2>Non-Veg</h2>
+        <div class="section">
+          <h3>Starters</h3>
+          <ul>
+            <li><span class="text">Chicken Sukka</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Chicken Kabab</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Anjal Fry</span> <span class="icons">✏️ 🗑️</span></li>
+          </ul>
+          <button class="add-btn">+ Add Item</button>
+        </div>
+        <div class="section">
+          <h3>Mains</h3>
+          <ul>
+            <li><span class="text">Kori Rotti</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Chicken Curry</span> <span class="icons">✏️ 🗑️</span></li>
+            <li><span class="text">Mutton Gravy</span> <span class="icons">✏️ 🗑️</span></li>
+          </ul>
+          <button class="add-btn">+ Add Item</button>
+        </div>
       </div>
     </div>
   </div>
 
   <script>
-    function initializeList(list) {
-      list.querySelectorAll('.edit-btn').forEach(editBtn => {
-        editBtn.onclick = function () {
-          const li = this.closest('li');
-          const span = li.querySelector('.text');
-          const input = document.createElement('input');
-          input.type = 'text';
-          input.value = span.textContent;
-          input.className = 'edit-input';
-          span.replaceWith(input);
-          input.focus();
-          input.addEventListener('blur', () => {
-            const newSpan = document.createElement('span');
-            newSpan.className = 'text';
-            newSpan.textContent = input.value.trim() || 'Unnamed Item';
-            input.replaceWith(newSpan);
-          });
-        };
-      });
+    document.addEventListener('click', function (e) {
+      const target = e.target;
 
-      list.querySelectorAll('.delete-btn').forEach(deleteBtn => {
-        deleteBtn.onclick = function () {
-          const li = this.closest('li');
-          li.remove();
-        };
-      });
-    }
+      if (target.textContent === '✏️') {
+        const textSpan = target.closest('li').querySelector('.text');
+        if (textSpan.isContentEditable) {
+          textSpan.contentEditable = false;
+        } else {
+          textSpan.contentEditable = true;
+          textSpan.focus();
+        }
+      }
 
-    function addItem(button) {
-      const ul = button.previousElementSibling;
-      const li = document.createElement('li');
-      li.innerHTML = `
-        <span class="text">New Item</span>
-        <span class="actions">
-          <span class="edit-btn">✏️</span>
-          <span class="delete-btn">🗑️</span>
-        </span>`;
-      ul.appendChild(li);
-      initializeList(ul);
-    }
+      if (target.textContent === '🗑️') {
+        const li = target.closest('li');
+        if (li) li.remove();
+      }
 
-    document.querySelectorAll('.editable-list').forEach(initializeList);
+      if (target.classList.contains('add-btn')) {
+        const ul = target.previousElementSibling;
+        const newLi = document.createElement('li');
+        newLi.innerHTML = `<span class="text">New Item</span> <span class="icons">✏️ 🗑️</span>`;
+        ul.appendChild(newLi);
+      }
+    });
   </script>
 </body>
 </html>
