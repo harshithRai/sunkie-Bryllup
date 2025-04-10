@@ -1,40 +1,44 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
+  background: #f8f9fa;
+  margin: 0;
   padding: 20px;
-  background: #f9f9f9;
-  color: #333;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.cards-container {
+.menu-container {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  background: #fff;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 32%;
-  min-width: 280px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
+  text-align: center;
   margin-top: 0;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+}
+
+.section {
+  margin-top: 20px;
 }
 
 .section h3 {
-  margin-bottom: 5px;
-  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
 }
 
 ul {
@@ -43,59 +47,51 @@ ul {
 }
 
 li {
+  margin-bottom: 8px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #f0f0f0;
-  border-radius: 6px;
+  align-items: center;
+  background: #f2f2f2;
   padding: 6px 10px;
-  margin-bottom: 6px;
+  border-radius: 6px;
 }
 
-li .text {
-  flex-grow: 1;
+.edit, .delete {
+  cursor: pointer;
+  margin-left: 8px;
+  color: #555;
 }
 
 button {
-  background-color: #007bff;
+  margin-top: 10px;
+  background-color: #343a40;
   color: white;
   border: none;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 5px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #495057;
 }
 
-.legend {
-  text-align: center;
-  margin-bottom: 20px;
+.common {
+  background-color: #fff5e6;
 }
 
-.legend-box {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0 6px 0 15px;
-  vertical-align: middle;
+.veg {
+  background-color: #f6fff6;
 }
 
-.legend-box.common { background-color: #ffeeba; }
-.legend-box.veg { background-color: #e5f7e9; }
-.legend-box.nonveg { background-color: #fbeaea; }
-
-.common { background-color: #fffdf5; }
-.veg { background-color: #f6fcf7; }
-.nonveg { background-color: #fdf7f7; }
-
-.lucide {
-  margin-left: 10px;
-  cursor: pointer;
+.nonveg {
+  background-color: #fff6f6;
 }
 
-.lucide:hover {
-  opacity: 0.7;
+input {
+  width: 100%;
+  border: none;
+  background: #e9ecef;
+  padding: 4px;
+  border-radius: 4px;
 }
