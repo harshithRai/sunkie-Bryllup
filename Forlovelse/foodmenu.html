@@ -2,89 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elegant Food Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editable Food Menu</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Wedding Food Menu</h1>
-  <div class="container">
-    <div class="card">
+  <h1>Food Menu</h1>
+  <div class="legend">
+    <span class="legend-box common"></span> Common
+    <span class="legend-box veg"></span> Veg
+    <span class="legend-box nonveg"></span> Non-Veg
+  </div>
+  <div class="card-container">
+    <div class="card common">
       <h2>Common Items</h2>
-      <div class="section-title">Starters</div>
-      <ul>
-        <li contenteditable="true">Pickle <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Salad <span class="remove" onclick="removeItem(this)">×</span></li>
-      </ul>
-      <button onclick="addItem(this)">Add Starter</button>
-
-      <div class="section-title">Mains</div>
-      <ul>
-        <li contenteditable="true">Rumali Roti <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Ghee Rice <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">White Rice <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Papad <span class="remove" onclick="removeItem(this)">×</span></li>
-      </ul>
-      <button onclick="addItem(this)">Add Main</button>
-
-      <div class="section-title">Dessert</div>
-      <ul>
-        <li contenteditable="true">Kheer/Holige <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Buttermilk <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Ice Cream <span class="remove" onclick="removeItem(this)">×</span></li>
-      </ul>
-      <button onclick="addItem(this)">Add Dessert</button>
+      <section>
+        <h3>Starters</h3>
+        <ul>
+          <li><span class="item-text">Pickle</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Salad</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Mains</h3>
+        <ul>
+          <li><span class="item-text">Rumali Roti</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Ghee Rice</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">White Rice</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Papad</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Dessert</h3>
+        <ul>
+          <li><span class="item-text">Kheer/Holige</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Buttermilk</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Ice Cream</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
     </div>
 
-    <div class="card">
+    <div class="card veg">
       <h2>Veg Items</h2>
-      <div class="section-title">Starters</div>
-      <ul>
-        <li contenteditable="true">Upkari <span class="remove" onclick="removeItem(this)">×</span></li>
-      </ul>
-      <button onclick="addItem(this)">Add Starter</button>
-
-      <div class="section-title">Mains</div>
-      <ul>
-        <li contenteditable="true">Rasam <span class="remove" onclick="removeItem(this)">×</span></li>
-      </ul>
-      <button onclick="addItem(this)">Add Main</button>
+      <section>
+        <h3>Starters</h3>
+        <ul>
+          <li><span class="item-text">Upkari</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Mains</h3>
+        <ul>
+          <li><span class="item-text">Rasam</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
     </div>
 
-    <div class="card">
+    <div class="card nonveg">
       <h2>Non-Veg Items</h2>
-      <div class="section-title">Starters</div>
-      <ul>
-        <li contenteditable="true">Chicken Sukka <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Chicken Kabab <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Anjal Fry <span class="remove" onclick="removeItem(this)">×</span></li>
-      </ul>
-      <button onclick="addItem(this)">Add Starter</button>
-
-      <div class="section-title">Mains</div>
-      <ul>
-        <li contenteditable="true">Kori Rotti <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Chicken Curry <span class="remove" onclick="removeItem(this)">×</span></li>
-        <li contenteditable="true">Mutton Gravy <span class="remove" onclick="removeItem(this)">×</span></li>
-      </ul>
-      <button onclick="addItem(this)">Add Main</button>
+      <section>
+        <h3>Starters</h3>
+        <ul>
+          <li><span class="item-text">Chicken Sukka</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Chicken Kabab</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Anjal Fry</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Mains</h3>
+        <ul>
+          <li><span class="item-text">Kori Rotti</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Chicken Curry</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+          <li><span class="item-text">Mutton Gravy</span> <i class="fas fa-pencil-alt edit-icon"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
     </div>
   </div>
 
   <script>
-    function addItem(button) {
-      const list = button.previousElementSibling;
-      if (list && list.tagName === 'UL') {
-        const newItem = document.createElement('li');
-        newItem.contentEditable = true;
-        newItem.innerHTML = 'New Item <span class="remove" onclick="removeItem(this)">×</span>';
-        list.appendChild(newItem);
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('edit-icon')) {
+        const span = e.target.previousElementSibling;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = span.textContent;
+        input.onblur = () => {
+          span.textContent = input.value;
+          span.style.display = 'inline';
+          e.target.style.display = 'inline';
+          input.remove();
+        };
+        span.style.display = 'none';
+        e.target.style.display = 'none';
+        span.parentElement.insertBefore(input, e.target);
+        input.focus();
       }
-    }
+    });
 
-    function removeItem(span) {
-      const li = span.parentElement;
-      li.parentElement.removeChild(li);
+    function addItem(button) {
+      const ul = button.previousElementSibling;
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.textContent = 'New Item';
+      span.className = 'item-text';
+      const icon = document.createElement('i');
+      icon.className = 'fas fa-pencil-alt edit-icon';
+      li.appendChild(span);
+      li.appendChild(icon);
+      ul.appendChild(li);
     }
   </script>
 </body>
