@@ -3,47 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Menu</title>
+  <title>Elegant Food Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Food Menu</h1>
-
+  <h1>Wedding Food Menu</h1>
   <div class="legend">
     <span class="legend-box common"></span> Common
     <span class="legend-box veg"></span> Veg
     <span class="legend-box nonveg"></span> Non-Veg
   </div>
-
-  <div class="menu-grid">
+  <div class="card-container">
     <div class="card common">
       <h2>Common Items</h2>
       <section>
         <h3>Starters</h3>
-        <ul contenteditable="true">
-          <li>Pickle</li>
-          <li>Salad</li>
+        <ul>
+          <li contenteditable="true">Pickle <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Salad <span class="remove" onclick="removeItem(this)">×</span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
+        <button onclick="addItem(this)">+ Add Item</button>
       </section>
       <section>
         <h3>Mains</h3>
-        <ul contenteditable="true">
-          <li>Rumali Roti</li>
-          <li>Ghee Rice</li>
-          <li>White Rice</li>
-          <li>Papad</li>
+        <ul>
+          <li contenteditable="true">Rumali Roti <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Ghee Rice <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">White Rice <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Papad <span class="remove" onclick="removeItem(this)">×</span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
+        <button onclick="addItem(this)">+ Add Item</button>
       </section>
       <section>
         <h3>Dessert</h3>
-        <ul contenteditable="true">
-          <li>Kheer/Holige</li>
-          <li>Buttermilk</li>
-          <li>Ice Cream</li>
+        <ul>
+          <li contenteditable="true">Kheer/Holige <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Buttermilk <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Ice Cream <span class="remove" onclick="removeItem(this)">×</span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
+        <button onclick="addItem(this)">+ Add Item</button>
       </section>
     </div>
 
@@ -51,17 +50,17 @@
       <h2>Veg Items</h2>
       <section>
         <h3>Starters</h3>
-        <ul contenteditable="true">
-          <li>Upkari</li>
+        <ul>
+          <li contenteditable="true">Upkari <span class="remove" onclick="removeItem(this)">×</span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
+        <button onclick="addItem(this)">+ Add Item</button>
       </section>
       <section>
         <h3>Mains</h3>
-        <ul contenteditable="true">
-          <li>Rasam</li>
+        <ul>
+          <li contenteditable="true">Rasam <span class="remove" onclick="removeItem(this)">×</span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
+        <button onclick="addItem(this)">+ Add Item</button>
       </section>
     </div>
 
@@ -69,34 +68,36 @@
       <h2>Non-Veg Items</h2>
       <section>
         <h3>Starters</h3>
-        <ul contenteditable="true">
-          <li>Chicken Sukka</li>
-          <li>Chicken Kabab</li>
-          <li>Anjal Fry</li>
+        <ul>
+          <li contenteditable="true">Chicken Sukka <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Chicken Kabab <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Anjal Fry <span class="remove" onclick="removeItem(this)">×</span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
+        <button onclick="addItem(this)">+ Add Item</button>
       </section>
       <section>
         <h3>Mains</h3>
-        <ul contenteditable="true">
-          <li>Kori Rotti</li>
-          <li>Chicken Curry</li>
-          <li>Mutton Gravy</li>
+        <ul>
+          <li contenteditable="true">Kori Rotti <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Chicken Curry <span class="remove" onclick="removeItem(this)">×</span></li>
+          <li contenteditable="true">Mutton Gravy <span class="remove" onclick="removeItem(this)">×</span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
+        <button onclick="addItem(this)">+ Add Item</button>
       </section>
     </div>
   </div>
 
   <script>
     function addItem(button) {
-      const list = button.previousElementSibling;
-      if (list && list.tagName === 'UL') {
-        const newItem = document.createElement('li');
-        newItem.textContent = 'New Item';
-        newItem.contentEditable = true;
-        list.appendChild(newItem);
-      }
+      const ul = button.previousElementSibling;
+      const li = document.createElement("li");
+      li.setAttribute("contenteditable", "true");
+      li.innerHTML = 'New Item <span class="remove" onclick="removeItem(this)">×</span>';
+      ul.appendChild(li);
+    }
+
+    function removeItem(span) {
+      span.parentElement.remove();
     }
   </script>
 </body>
