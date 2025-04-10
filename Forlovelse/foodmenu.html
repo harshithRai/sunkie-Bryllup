@@ -2,110 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Food Menu</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <h1>Food Menu</h1>
-  <div class="legend">
-    <span class="legend-box common"></span> Common
-    <span class="legend-box veg"></span> Veg
-    <span class="legend-box nonveg"></span> Non-Veg
-  </div>
-  <div class="cards-container">
+  <div class="menu-container">
+    <!-- Common -->
     <div class="card common">
-      <h2>Common Items</h2>
+      <h2>Common</h2>
       <div class="section">
         <h3>Starters</h3>
         <ul>
-          <li><span class="text">Pickle</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Salad</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
+          <li><span class="text">Pickle</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Salad</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
       </div>
       <div class="section">
         <h3>Mains</h3>
         <ul>
-          <li><span class="text">Rumali Roti</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Ghee Rice</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">White Rice</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Papad</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
+          <li><span class="text">Rumali Roti</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Ghee Rice</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">White Rice</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Papad</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
       </div>
       <div class="section">
         <h3>Dessert</h3>
         <ul>
-          <li><span class="text">Kheer/Holige</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Buttermilk</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Ice Cream</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
+          <li><span class="text">Kheer/Holige</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Buttermilk</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Ice Cream</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
       </div>
     </div>
+
+    <!-- Veg -->
     <div class="card veg">
-      <h2>Veg Items</h2>
+      <h2>Veg</h2>
       <div class="section">
         <h3>Starters</h3>
         <ul>
-          <li><span class="text">Upkari</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
+          <li><span class="text">Upkari</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
       </div>
       <div class="section">
         <h3>Mains</h3>
         <ul>
-          <li><span class="text">Rasam</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
+          <li><span class="text">Rasam</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
       </div>
     </div>
+
+    <!-- Non-Veg -->
     <div class="card nonveg">
-      <h2>Non-Veg Items</h2>
+      <h2>Non-Veg</h2>
       <div class="section">
         <h3>Starters</h3>
         <ul>
-          <li><span class="text">Chicken Sukka</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Chicken Kabab</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Anjal Fry</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
+          <li><span class="text">Chicken Sukka</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Chicken Kabab</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Anjal Fry</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
       </div>
       <div class="section">
         <h3>Mains</h3>
         <ul>
-          <li><span class="text">Kori Rotti</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Chicken Curry</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
-          <li><span class="text">Mutton Gravy</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i></li>
+          <li><span class="text">Kori Rotti</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Chicken Curry</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
+          <li><span class="text">Mutton Gravy</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i></li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
       </div>
     </div>
   </div>
+
   <script>
+    document.querySelectorAll('.edit').forEach(icon => {
+      icon.addEventListener('click', () => {
+        const span = icon.parentElement.querySelector('.text');
+        const input = document.createElement('input');
+        input.value = span.textContent;
+        input.addEventListener('blur', () => {
+          span.textContent = input.value;
+          span.style.display = '';
+          input.remove();
+        });
+        span.style.display = 'none';
+        icon.parentElement.insertBefore(input, span);
+        input.focus();
+      });
+    });
+
+    document.querySelectorAll('.delete').forEach(icon => {
+      icon.addEventListener('click', () => {
+        icon.parentElement.remove();
+      });
+    });
+
     function addItem(button) {
-      const ul = button.previousElementSibling;
-      const li = document.createElement("li");
-      li.innerHTML = '<span class="text">New Item</span> <i class="lucide lucide-pencil" onclick="editItem(this)"></i> <i class="lucide lucide-trash" onclick="removeItem(this)"></i>';
+      const ul = button.previousElementSibling.querySelector('ul');
+      const li = document.createElement('li');
+      li.innerHTML = '<span class="text">New Item</span> <i class="fas fa-pencil-alt edit"></i> <i class="fas fa-trash delete"></i>';
       ul.appendChild(li);
-      lucide.createIcons();
+      li.querySelector('.edit').addEventListener('click', () => {
+        const span = li.querySelector('.text');
+        const input = document.createElement('input');
+        input.value = span.textContent;
+        input.addEventListener('blur', () => {
+          span.textContent = input.value;
+          span.style.display = '';
+          input.remove();
+        });
+        span.style.display = 'none';
+        li.insertBefore(input, span);
+        input.focus();
+      });
+      li.querySelector('.delete').addEventListener('click', () => {
+        li.remove();
+      });
     }
-
-    function editItem(icon) {
-      const textSpan = icon.parentElement.querySelector(".text");
-      const newText = prompt("Edit item:", textSpan.textContent);
-      if (newText !== null) textSpan.textContent = newText;
-    }
-
-    function removeItem(icon) {
-      const li = icon.parentElement;
-      li.parentElement.removeChild(li);
-    }
-
-    window.onload = () => lucide.createIcons();
   </script>
 </body>
 </html>
