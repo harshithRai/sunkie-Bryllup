@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #fafafa;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+.section {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+.common {
+  background-color: #fff4cc;
+}
+
+.veg {
+  background-color: #d4f7d4;
+}
+
+.nonveg {
+  background-color: #ffd6d6;
+}
+
+.legend {
+  margin: 10px 0;
+}
+
+.legend-box {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  vertical-align: middle;
+  border: 1px solid #999;
+}
+
+.legend .common {
+  background-color: #fff4cc;
+}
+
+.legend .veg {
+  background-color: #d4f7d4;
+}
+
+.legend .nonveg {
+  background-color: #ffd6d6;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
