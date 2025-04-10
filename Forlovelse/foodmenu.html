@@ -90,18 +90,20 @@
   <script>
     document.addEventListener('click', function (e) {
       const target = e.target;
-
+  
       if (target.classList.contains('edit-btn')) {
         const textSpan = target.closest('li').querySelector('.text');
         textSpan.contentEditable = !textSpan.isContentEditable;
-        if (textSpan.isContentEditable) textSpan.focus();
+        if (textSpan.isContentEditable) {
+          textSpan.focus();
+        }
       }
-
+  
       if (target.classList.contains('delete-btn')) {
         const li = target.closest('li');
         if (li) li.remove();
       }
-
+  
       if (target.classList.contains('add-btn')) {
         const ul = target.previousElementSibling;
         const newLi = document.createElement('li');
@@ -116,5 +118,6 @@
       }
     });
   </script>
+
 </body>
 </html>
