@@ -2,111 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elegant Food Menu</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Food Menu</h1>
-    <div class="legend">
-      <span class="legend-box common"></span> Common
-      <span class="legend-box veg"></span> Veg
-      <span class="legend-box nonveg"></span> Non-Veg
+  <h1>Wedding Food Menu</h1>
+  <div class="legend">
+    <span class="legend-box common"></span> Common
+    <span class="legend-box veg"></span> Veg
+    <span class="legend-box nonveg"></span> Non-Veg
+  </div>
+  <div class="menu-container">
+    <div class="card common">
+      <h2>Common Items</h2>
+      <section>
+        <h3>Starters</h3>
+        <ul>
+          <li contenteditable="true">Pickle <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Salad <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Mains</h3>
+        <ul>
+          <li contenteditable="true">Rumali Roti <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Ghee Rice <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">White Rice <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Papad <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Dessert</h3>
+        <ul>
+          <li contenteditable="true">Kheer/Holige <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Buttermilk <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Ice Cream <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
     </div>
 
-    <div class="menu-wrapper">
-      <!-- Common -->
-      <div class="card common">
-        <h2>Common Items</h2>
-        <div class="section">
-          <h3>Starters</h3>
-          <ul id="common-starters" class="item-list">
-            <li>Pickle <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Salad <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-          </ul>
-          <button onclick="addItem('common-starters')">Add Item</button>
-        </div>
+    <div class="card veg">
+      <h2>Veg Items</h2>
+      <section>
+        <h3>Starters</h3>
+        <ul>
+          <li contenteditable="true">Upkari <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Mains</h3>
+        <ul>
+          <li contenteditable="true">Rasam <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+    </div>
 
-        <div class="section">
-          <h3>Mains</h3>
-          <ul id="common-mains" class="item-list">
-            <li>Rumali Roti <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Ghee Rice <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>White Rice <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Papad <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-          </ul>
-          <button onclick="addItem('common-mains')">Add Item</button>
-        </div>
-
-        <div class="section">
-          <h3>Dessert</h3>
-          <ul id="common-dessert" class="item-list">
-            <li>Kheer/Holige <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Buttermilk <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Ice Cream <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-          </ul>
-          <button onclick="addItem('common-dessert')">Add Item</button>
-        </div>
-      </div>
-
-      <!-- Veg -->
-      <div class="card veg">
-        <h2>Veg Items</h2>
-        <div class="section">
-          <h3>Starters</h3>
-          <ul id="veg-starters" class="item-list">
-            <li>Upkari <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-          </ul>
-          <button onclick="addItem('veg-starters')">Add Item</button>
-        </div>
-
-        <div class="section">
-          <h3>Mains</h3>
-          <ul id="veg-mains" class="item-list">
-            <li>Rasam <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-          </ul>
-          <button onclick="addItem('veg-mains')">Add Item</button>
-        </div>
-      </div>
-
-      <!-- Non-Veg -->
-      <div class="card nonveg">
-        <h2>Non-Veg Items</h2>
-        <div class="section">
-          <h3>Starters</h3>
-          <ul id="nonveg-starters" class="item-list">
-            <li>Chicken Sukka <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Chicken Kabab <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Anjal Fry <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-          </ul>
-          <button onclick="addItem('nonveg-starters')">Add Item</button>
-        </div>
-
-        <div class="section">
-          <h3>Mains</h3>
-          <ul id="nonveg-mains" class="item-list">
-            <li>Kori Rotti <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Chicken Curry <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-            <li>Mutton Gravy <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span></li>
-          </ul>
-          <button onclick="addItem('nonveg-mains')">Add Item</button>
-        </div>
-      </div>
+    <div class="card nonveg">
+      <h2>Non-Veg Items</h2>
+      <section>
+        <h3>Starters</h3>
+        <ul>
+          <li contenteditable="true">Chicken Sukka <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Chicken Kabab <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Anjal Fry <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
+      <section>
+        <h3>Mains</h3>
+        <ul>
+          <li contenteditable="true">Kori Rotti <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Chicken Curry <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+          <li contenteditable="true">Mutton Gravy <i class="fas fa-trash" onclick="removeItem(this)"></i></li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </section>
     </div>
   </div>
 
   <script>
-    function addItem(listId) {
-      const item = prompt("Enter item name:");
-      if (item) {
-        const ul = document.getElementById(listId);
-        const li = document.createElement("li");
-        li.innerHTML = `${item} <span class="remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></span>`;
+    function addItem(button) {
+      const ul = button.previousElementSibling;
+      if (ul && ul.tagName === 'UL') {
+        const li = document.createElement('li');
+        li.contentEditable = true;
+        li.innerHTML = 'New Item <i class="fas fa-trash" onclick="removeItem(this)"></i>';
         ul.appendChild(li);
       }
     }
