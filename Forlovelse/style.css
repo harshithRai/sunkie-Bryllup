@@ -3,20 +3,50 @@ body {
   background: #f9f9f9;
   margin: 0;
   padding: 20px;
+  min-height: 100vh;
 }
 
 h1 {
   text-align: center;
   font-weight: 600;
-  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.download-container {
+  text-align: center;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#download-html, #download-pdf {
+  background-color: #2196F3;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#download-html:hover, #download-pdf:hover {
+  background-color: #0b7dda;
+  transform: translateY(-2px);
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -25,88 +55,118 @@ h1 {
   background: white;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 20px;
+  padding: 25px;
   width: 100%;
   max-width: 350px;
   box-sizing: border-box;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h2 {
   margin-top: 0;
   text-align: center;
+  color: #333;
+  font-size: 1.5em;
 }
 
 .card section {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .card h3 {
   font-weight: 600;
-  font-size: 1.1em;
-  margin-bottom: 8px;
+  font-size: 1.2em;
+  margin-bottom: 12px;
+  color: #444;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 li {
-  background: #f1f1f1;
-  border-radius: 6px;
-  padding: 8px 12px;
-  margin: 6px 0;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 8px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #f0f0f0;
+}
+
+.text {
+  flex-grow: 1;
+  margin-right: 10px;
 }
 
 .icons {
   display: flex;
-  gap: 8px;
+  gap: 12px;
 }
 
 .edit-btn, .delete-btn {
   cursor: pointer;
-  font-size: 0.9em;
-  transition: transform 0.2s;
+  font-size: 1em;
+  transition: all 0.2s;
+  opacity: 0.7;
 }
 
 .edit-btn:hover, .delete-btn:hover {
+  opacity: 1;
   transform: scale(1.1);
 }
 
-button {
+.delete-btn {
+  color: #f44336;
+}
+
+.add-btn {
   background-color: #4CAF50;
   color: white;
   border: none;
   padding: 8px 16px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   margin-top: 10px;
+  width: 100%;
   font-family: 'Quicksand', sans-serif;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-button:hover {
+.add-btn:hover {
   background-color: #388e3c;
 }
 
+/* Category-specific styles */
 .common {
-  border-top: 5px solid #ccc;
+  border-top: 5px solid #9E9E9E;
 }
 
 .veg {
+  border-top: 5px solid #4CAF50;
   background-color: #f9fdf9;
-  border-top: 5px solid #c8e6c9;
 }
 
 .nonveg {
+  border-top: 5px solid #f44336;
   background-color: #fdf9f9;
-  border-top: 5px solid #f8bbd0;
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
   .card-container {
     flex-direction: column;
@@ -115,5 +175,14 @@ button:hover {
   
   .card {
     max-width: 100%;
+  }
+  
+  .download-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #download-html, #download-pdf {
+    width: 80%;
   }
 }
