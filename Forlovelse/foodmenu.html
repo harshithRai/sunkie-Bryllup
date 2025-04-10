@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Editable Food Menu</title>
+  <title>Food Menu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,22 +15,19 @@
     <span class="legend-box nonveg"></span> Non-Veg
   </div>
 
-  <table>
-    <tr>
-      <th class="common">Common Items</th>
-      <th class="veg">Veg Items</th>
-      <th class="nonveg">Non-Veg Items</th>
-    </tr>
-    <tr>
-      <td class="common">
-        <strong>Starters:</strong>
+  <div class="menu-grid">
+    <div class="card common">
+      <h2>Common Items</h2>
+      <section>
+        <h3>Starters</h3>
         <ul contenteditable="true">
           <li>Pickle</li>
           <li>Salad</li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-
-        <strong>Mains:</strong>
+      </section>
+      <section>
+        <h3>Mains</h3>
         <ul contenteditable="true">
           <li>Rumali Roti</li>
           <li>Ghee Rice</li>
@@ -38,49 +35,58 @@
           <li>Papad</li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-
-        <strong>Dessert:</strong>
+      </section>
+      <section>
+        <h3>Dessert</h3>
         <ul contenteditable="true">
           <li>Kheer/Holige</li>
           <li>Buttermilk</li>
           <li>Ice Cream</li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </td>
+      </section>
+    </div>
 
-      <td class="veg">
-        <strong>Starters:</strong>
+    <div class="card veg">
+      <h2>Veg Items</h2>
+      <section>
+        <h3>Starters</h3>
         <ul contenteditable="true">
           <li>Upkari</li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-
-        <strong>Mains:</strong>
+      </section>
+      <section>
+        <h3>Mains</h3>
         <ul contenteditable="true">
           <li>Rasam</li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </td>
+      </section>
+    </div>
 
-      <td class="nonveg">
-        <strong>Starters:</strong>
+    <div class="card nonveg">
+      <h2>Non-Veg Items</h2>
+      <section>
+        <h3>Starters</h3>
         <ul contenteditable="true">
           <li>Chicken Sukka</li>
           <li>Chicken Kabab</li>
           <li>Anjal Fry</li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-
-        <strong>Mains:</strong>
+      </section>
+      <section>
+        <h3>Mains</h3>
         <ul contenteditable="true">
           <li>Kori Rotti</li>
           <li>Chicken Curry</li>
           <li>Mutton Gravy</li>
         </ul>
         <button onclick="addItem(this)">Add Item</button>
-      </td>
-    </tr>
-  </table>
+      </section>
+    </div>
+  </div>
 
   <script>
     function addItem(button) {
