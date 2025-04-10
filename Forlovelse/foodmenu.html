@@ -2,101 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Editable Food Menu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegant Food Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Food Menu</h1>
-    <div class="legend">
-      <span class="legend-box common"></span> Common
-      <span class="legend-box veg"></span> Veg
-      <span class="legend-box nonveg"></span> Non-Veg
+  <h1>Food Menu</h1>
+  <div class="legend">
+    <span class="legend-box common"></span> Common
+    <span class="legend-box veg"></span> Veg
+    <span class="legend-box nonveg"></span> Non-Veg
+  </div>
+  <div class="menu-container">
+    <div class="card common">
+      <h2>Common Items</h2>
+      <h3>Starters</h3>
+      <ul>
+        <li contenteditable="true">Pickle <span class="remove">&times;</span></li>
+        <li contenteditable="true">Salad <span class="remove">&times;</span></li>
+      </ul>
+      <button onclick="addItem(this)">Add Item</button>
+      <h3>Mains</h3>
+      <ul>
+        <li contenteditable="true">Rumali Roti <span class="remove">&times;</span></li>
+        <li contenteditable="true">Ghee Rice <span class="remove">&times;</span></li>
+        <li contenteditable="true">White Rice <span class="remove">&times;</span></li>
+        <li contenteditable="true">Papad <span class="remove">&times;</span></li>
+      </ul>
+      <button onclick="addItem(this)">Add Item</button>
+      <h3>Dessert</h3>
+      <ul>
+        <li contenteditable="true">Kheer/Holige <span class="remove">&times;</span></li>
+        <li contenteditable="true">Buttermilk <span class="remove">&times;</span></li>
+        <li contenteditable="true">Ice Cream <span class="remove">&times;</span></li>
+      </ul>
+      <button onclick="addItem(this)">Add Item</button>
     </div>
-    <div class="cards">
-      <div class="card common">
-        <h2>Common Items</h2>
-        <h3>Starters</h3>
-        <ul>
-          <li contenteditable="true">Pickle <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Salad <span class="remove" onclick="removeItem(this)">✖</span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-        <h3>Mains</h3>
-        <ul>
-          <li contenteditable="true">Rumali Roti <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Ghee Rice <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">White Rice <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Papad <span class="remove" onclick="removeItem(this)">✖</span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-        <h3>Dessert</h3>
-        <ul>
-          <li contenteditable="true">Kheer/Holige <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Buttermilk <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Ice Cream <span class="remove" onclick="removeItem(this)">✖</span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="card veg">
-        <h2>Veg Items</h2>
-        <h3>Starters</h3>
-        <ul>
-          <li contenteditable="true">Upkari <span class="remove" onclick="removeItem(this)">✖</span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-        <h3>Mains</h3>
-        <ul>
-          <li contenteditable="true">Rasam <span class="remove" onclick="removeItem(this)">✖</span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="card nonveg">
-        <h2>Non-Veg Items</h2>
-        <h3>Starters</h3>
-        <ul>
-          <li contenteditable="true">Chicken Sukka <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Chicken Kabab <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Anjal Fry <span class="remove" onclick="removeItem(this)">✖</span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-        <h3>Mains</h3>
-        <ul>
-          <li contenteditable="true">Kori Rotti <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Chicken Curry <span class="remove" onclick="removeItem(this)">✖</span></li>
-          <li contenteditable="true">Mutton Gravy <span class="remove" onclick="removeItem(this)">✖</span></li>
-        </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
+
+    <div class="card veg">
+      <h2>Veg Items</h2>
+      <h3>Starters</h3>
+      <ul>
+        <li contenteditable="true">Upkari <span class="remove">&times;</span></li>
+      </ul>
+      <button onclick="addItem(this)">Add Item</button>
+      <h3>Mains</h3>
+      <ul>
+        <li contenteditable="true">Rasam <span class="remove">&times;</span></li>
+      </ul>
+      <button onclick="addItem(this)">Add Item</button>
+    </div>
+
+    <div class="card nonveg">
+      <h2>Non-Veg Items</h2>
+      <h3>Starters</h3>
+      <ul>
+        <li contenteditable="true">Chicken Sukka <span class="remove">&times;</span></li>
+        <li contenteditable="true">Chicken Kabab <span class="remove">&times;</span></li>
+        <li contenteditable="true">Anjal Fry <span class="remove">&times;</span></li>
+      </ul>
+      <button onclick="addItem(this)">Add Item</button>
+      <h3>Mains</h3>
+      <ul>
+        <li contenteditable="true">Kori Rotti <span class="remove">&times;</span></li>
+        <li contenteditable="true">Chicken Curry <span class="remove">&times;</span></li>
+        <li contenteditable="true">Mutton Gravy <span class="remove">&times;</span></li>
+      </ul>
+      <button onclick="addItem(this)">Add Item</button>
     </div>
   </div>
 
   <script>
     function addItem(button) {
-      const ul = button.previousElementSibling;
-      if (ul && ul.tagName === 'UL') {
-        const li = document.createElement('li');
-        li.contentEditable = true;
-        li.innerHTML = 'New Item <span class="remove" onclick="removeItem(this)">✖</span>';
-        ul.appendChild(li);
+      const list = button.previousElementSibling;
+      if (list && list.tagName === 'UL') {
+        const newItem = document.createElement('li');
+        newItem.contentEditable = true;
+        newItem.innerHTML = 'New Item <span class="remove">&times;</span>';
+        list.appendChild(newItem);
       }
     }
 
-    function removeItem(span) {
-      const li = span.parentElement;
-      li.remove();
-    }
-
-    // Add ✖ to existing list items if missing
-    document.querySelectorAll('ul li').forEach(li => {
-      if (!li.querySelector('.remove')) {
-        const span = document.createElement('span');
-        span.className = 'remove';
-        span.innerHTML = '✖';
-        span.onclick = () => removeItem(span);
-        li.appendChild(span);
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('remove')) {
+        e.target.parentElement.remove();
       }
     });
   </script>
