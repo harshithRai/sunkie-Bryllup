@@ -1,76 +1,79 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background: #fafafa;
-}
-
-h1 {
-  text-align: center;
+  background: #f5f5f5;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  table-layout: fixed;
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
+  vertical-align: top;
   padding: 10px;
-  text-align: center;
-  vertical-align: middle;
 }
 
 th {
-  background-color: #333;
-  color: white;
-}
-
-.section {
-  font-weight: bold;
-  background-color: #f0f0f0;
+  background: #eee;
+  text-align: center;
+  font-size: 1.2em;
 }
 
 .common {
-  background-color: #fff4cc;
+  background-color: #ffeeba;
 }
 
 .veg {
-  background-color: #d4f7d4;
+  background-color: #d4edda;
 }
 
 .nonveg {
-  background-color: #ffd6d6;
+  background-color: #f8d7da;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 5px 0 10px 20px;
+  padding: 0;
 }
 
 .legend {
-  margin: 10px 0;
+  margin-bottom: 20px;
 }
 
 .legend-box {
   display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
   vertical-align: middle;
-  border: 1px solid #999;
 }
 
-.legend .common {
-  background-color: #fff4cc;
+.legend-box.common {
+  background-color: #ffeeba;
 }
 
-.legend .veg {
-  background-color: #d4f7d4;
+.legend-box.veg {
+  background-color: #d4edda;
 }
 
-.legend .nonveg {
-  background-color: #ffd6d6;
+.legend-box.nonveg {
+  background-color: #f8d7da;
 }
 
 button {
-  margin-top: 15px;
-  padding: 8px 15px;
-  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
   cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
 }

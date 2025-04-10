@@ -1,117 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Food Menu</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editable Food Menu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Wedding Food Menu</h1>
+  <h1>Food Menu</h1>
 
   <div class="legend">
-    <span class="legend-box common"></span> Common  
-    <span class="legend-box veg"></span> Veg  
-    <span class="legend-box nonveg"></span> Non-Veg  
+    <span class="legend-box common"></span> Common
+    <span class="legend-box veg"></span> Veg
+    <span class="legend-box nonveg"></span> Non-Veg
   </div>
 
-  <table id="menuTable">
-    <thead>
-      <tr>
-        <th>Common Items</th>
-        <th>Veg Items</th>
-        <th>Non-Veg Items</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Starters -->
-      <tr>
-        <td class="section common">–</td>
-        <td class="section veg">Starters</td>
-        <td class="section nonveg">Starters</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td contenteditable="true">Upkari</td>
-        <td contenteditable="true">Chicken Sukka</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td contenteditable="true">Chicken Kabab</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td contenteditable="true">Anjal Fry</td>
-      </tr>
+  <table>
+    <tr>
+      <th class="common">Common Items</th>
+      <th class="veg">Veg Items</th>
+      <th class="nonveg">Non-Veg Items</th>
+    </tr>
+    <tr>
+      <td class="common">
+        <strong>Starters:</strong>
+        <ul contenteditable="true">
+          <li>Pickle</li>
+          <li>Salad</li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
 
-      <!-- Mains -->
-      <tr>
-        <td class="section common">Mains</td>
-        <td class="section veg">Mains</td>
-        <td class="section nonveg">Mains</td>
-      </tr>
-      <tr>
-        <td contenteditable="true">Rumali Roti</td>
-        <td contenteditable="true">Rasam</td>
-        <td contenteditable="true">Kori Rotti</td>
-      </tr>
-      <tr>
-        <td contenteditable="true">Ghee Rice</td>
-        <td></td>
-        <td contenteditable="true">Chicken Curry</td>
-      </tr>
-      <tr>
-        <td contenteditable="true">White Rice</td>
-        <td></td>
-        <td contenteditable="true">Mutton Gravy</td>
-      </tr>
-      <tr>
-        <td contenteditable="true">Papad</td>
-        <td></td>
-        <td></td>
-      </tr>
+        <strong>Mains:</strong>
+        <ul contenteditable="true">
+          <li>Rumali Roti</li>
+          <li>Ghee Rice</li>
+          <li>White Rice</li>
+          <li>Papad</li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
 
-      <!-- Dessert -->
-      <tr>
-        <td class="section common">Dessert</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td contenteditable="true">Kheer / Holige</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td contenteditable="true">Buttermilk</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td contenteditable="true">Ice Cream</td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
+        <strong>Dessert:</strong>
+        <ul contenteditable="true">
+          <li>Kheer/Holige</li>
+          <li>Buttermilk</li>
+          <li>Ice Cream</li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </td>
+
+      <td class="veg">
+        <strong>Starters:</strong>
+        <ul contenteditable="true">
+          <li>Upkari</li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+
+        <strong>Mains:</strong>
+        <ul contenteditable="true">
+          <li>Rasam</li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </td>
+
+      <td class="nonveg">
+        <strong>Starters:</strong>
+        <ul contenteditable="true">
+          <li>Chicken Sukka</li>
+          <li>Chicken Kabab</li>
+          <li>Anjal Fry</li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+
+        <strong>Mains:</strong>
+        <ul contenteditable="true">
+          <li>Kori Rotti</li>
+          <li>Chicken Curry</li>
+          <li>Mutton Gravy</li>
+        </ul>
+        <button onclick="addItem(this)">Add Item</button>
+      </td>
+    </tr>
   </table>
 
-  <button onclick="addRow()">➕ Add Row</button>
-  <button onclick="deleteRow()">➖ Delete Last Row</button>
-
   <script>
-    function addRow() {
-      const table = document.getElementById("menuTable").getElementsByTagName('tbody')[0];
-      const newRow = table.insertRow();
-      for (let i = 0; i < 3; i++) {
-        const cell = newRow.insertCell();
-        cell.contentEditable = "true";
+    function addItem(button) {
+      const list = button.previousElementSibling;
+      if (list && list.tagName === 'UL') {
+        const newItem = document.createElement('li');
+        newItem.textContent = 'New Item';
+        newItem.contentEditable = true;
+        list.appendChild(newItem);
       }
-    }
-
-    function deleteRow() {
-      const table = document.getElementById("menuTable").getElementsByTagName('tbody')[0];
-      if (table.rows.length > 0) table.deleteRow(-1);
     }
   </script>
 </body>
