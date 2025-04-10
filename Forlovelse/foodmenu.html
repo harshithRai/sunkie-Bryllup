@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Editable Food Menu</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Food Menu</h1>
+  <div class="download-container">
+    <button id="download-html">💾 Save as HTML</button>
+    <button id="download-pdf">📄 Save as PDF</button>
+  </div>
+  
   <div class="card-container">
+    <!-- Common Menu Card -->
     <div class="card common">
       <h2>Common</h2>
       <section>
@@ -18,87 +24,58 @@
           <li><span class="text">Pickle</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
           <li><span class="text">Salad</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button class="add-btn">Add Item</button>
+        <button class="add-btn">➕ Add Item</button>
       </section>
       <section>
         <h3>Mains</h3>
         <ul>
           <li><span class="text">Rumali Roti</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
           <li><span class="text">Ghee Rice</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">White Rice</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Papad</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button class="add-btn">Add Item</button>
-      </section>
-      <section>
-        <h3>Dessert</h3>
-        <ul>
-          <li><span class="text">Kheer/Holige</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Buttermilk</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Ice Cream</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button class="add-btn">Add Item</button>
+        <button class="add-btn">➕ Add Item</button>
       </section>
     </div>
 
+    <!-- Veg Menu Card -->
     <div class="card veg">
       <h2>Veg</h2>
-      <section>
-        <h3>Starters</h3>
-        <ul>
-          <li><span class="text">Upkari</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button class="add-btn">Add Item</button>
-      </section>
       <section>
         <h3>Mains</h3>
         <ul>
           <li><span class="text">Rasam</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button class="add-btn">Add Item</button>
+        <button class="add-btn">➕ Add Item</button>
       </section>
     </div>
 
+    <!-- Non-Veg Menu Card -->
     <div class="card nonveg">
       <h2>Non-Veg</h2>
       <section>
         <h3>Starters</h3>
         <ul>
           <li><span class="text">Chicken Sukka</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Chicken Kabab</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Anjal Fry</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button class="add-btn">Add Item</button>
-      </section>
-      <section>
-        <h3>Mains</h3>
-        <ul>
-          <li><span class="text">Kori Rotti</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Chicken Curry</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-          <li><span class="text">Mutton Gravy</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
-        </ul>
-        <button class="add-btn">Add Item</button>
+        <button class="add-btn">➕ Add Item</button>
       </section>
     </div>
   </div>
 
   <script>
-    document.addEventListener('click', function (e) {
+    // Edit/Delete/Add Functionality
+    document.addEventListener('click', function(e) {
       const target = e.target;
-  
+      
       if (target.classList.contains('edit-btn')) {
         const textSpan = target.closest('li').querySelector('.text');
         textSpan.contentEditable = !textSpan.isContentEditable;
-        if (textSpan.isContentEditable) {
-          textSpan.focus();
-        }
+        if (textSpan.isContentEditable) textSpan.focus();
       }
-  
+      
       if (target.classList.contains('delete-btn')) {
-        const li = target.closest('li');
-        if (li) li.remove();
+        target.closest('li').remove();
       }
-  
+      
       if (target.classList.contains('add-btn')) {
         const ul = target.previousElementSibling;
         const newLi = document.createElement('li');
@@ -112,7 +89,57 @@
         ul.appendChild(newLi);
       }
     });
-  </script>
 
+    // Download as HTML
+    document.getElementById('download-html').addEventListener('click', () => {
+      const htmlContent = `<!DOCTYPE html>${document.documentElement.outerHTML}`;
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'food-menu.html';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // Download as PDF
+    document.getElementById('download-pdf').addEventListener('click', async () => {
+      // Show loading state
+      const pdfBtn = document.getElementById('download-pdf');
+      pdfBtn.disabled = true;
+      pdfBtn.textContent = 'Generating PDF...';
+      
+      // Dynamically load libraries
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+      
+      // Generate PDF
+      const { jsPDF } = window.jspdf;
+      const element = document.querySelector('.card-container');
+      
+      html2canvas(element, { scale: 2 }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const imgWidth = 190; // Reduced width for margins
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        
+        pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+        pdf.save('food-menu.pdf');
+        pdfBtn.textContent = '📄 Save as PDF';
+        pdfBtn.disabled = false;
+      });
+    });
+
+    // Helper function to load scripts
+    function loadScript(src) {
+      return new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = resolve;
+        document.head.appendChild(script);
+      });
+    }
+  </script>
 </body>
 </html>
