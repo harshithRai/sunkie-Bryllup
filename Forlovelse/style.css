@@ -1,117 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap');
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background: #f3f0ea;
+  padding: 30px;
   margin: 0;
-  padding: 40px;
-  background: #f8f9fa;
   color: #333;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
 h1 {
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  font-weight: 600;
   margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #4b3832;
 }
 
-.legend {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.legend-box {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 10px 0 20px;
-  vertical-align: middle;
-}
-
-.legend-box.common {
-  background-color: #fff3cd;
-}
-
-.legend-box.veg {
-  background-color: #d4edda;
-}
-
-.legend-box.nonveg {
-  background-color: #f8d7da;
-}
-
-.cards {
+.container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
   background: #ffffff;
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 .card h2 {
-  text-align: center;
-  margin-bottom: 10px;
-  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #3a2f2a;
 }
 
-.card h3 {
-  margin-top: 20px;
-  font-weight: 500;
+.section-title {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #7a5c50;
 }
 
 ul {
+  list-style-type: disc;
   padding-left: 20px;
+  margin-bottom: 10px;
 }
 
-li {
-  margin-bottom: 8px;
+ul li {
+  margin-bottom: 6px;
+  background: #faf5f0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  position: relative;
+  padding-right: 24px;
+}
+
+ul li:hover {
+  background: #f0e9e4;
+}
+
+ul li .remove {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  cursor: pointer;
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 button {
-  background: #007bff;
+  background-color: #6f4e37;
   color: white;
   border: none;
   padding: 6px 12px;
-  margin-top: 5px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-.common {
-  background-color: #fff9e6;
-}
-
-.veg {
-  background-color: #eaf8ef;
-}
-
-.nonveg {
-  background-color: #faeaea;
-}
-
-.remove {
-  margin-left: 10px;
-  color: #d9534f;
-  cursor: pointer;
-  font-weight: bold;
+  margin-top: 6px;
   font-size: 0.9em;
 }
 
-.remove:hover {
-  color: #c9302c;
+button:hover {
+  background-color: #4b3832;
 }
