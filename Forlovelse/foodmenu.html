@@ -2,85 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editable Food Menu</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Food Menu</h1>
   <div class="card-container">
     <div class="card common">
       <h2>Common</h2>
-      <div class="section">
+      <section>
         <h3>Starters</h3>
         <ul>
-          <li>Pickle <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Salad <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
+          <li><span class="text">Pickle</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Salad</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+        <button class="add-btn">Add Item</button>
+      </section>
+      <section>
         <h3>Mains</h3>
         <ul>
-          <li>Rumali Roti <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Ghee Rice <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>White Rice <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Papad <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
+          <li><span class="text">Rumali Roti</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Ghee Rice</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">White Rice</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Papad</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+        <button class="add-btn">Add Item</button>
+      </section>
+      <section>
         <h3>Dessert</h3>
         <ul>
-          <li>Kheer/Holige <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Buttermilk <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Ice Cream <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
+          <li><span class="text">Kheer/Holige</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Buttermilk</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Ice Cream</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
+        <button class="add-btn">Add Item</button>
+      </section>
     </div>
 
     <div class="card veg">
       <h2>Veg</h2>
-      <div class="section">
+      <section>
         <h3>Starters</h3>
         <ul>
-          <li>Upkari <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
+          <li><span class="text">Upkari</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+        <button class="add-btn">Add Item</button>
+      </section>
+      <section>
         <h3>Mains</h3>
         <ul>
-          <li>Rasam <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
+          <li><span class="text">Rasam</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
+        <button class="add-btn">Add Item</button>
+      </section>
     </div>
 
     <div class="card nonveg">
       <h2>Non-Veg</h2>
-      <div class="section">
+      <section>
         <h3>Starters</h3>
         <ul>
-          <li>Chicken Sukka <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Chicken Kabab <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Anjal Fry <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
+          <li><span class="text">Chicken Sukka</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Chicken Kabab</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Anjal Fry</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
-      <div class="section">
+        <button class="add-btn">Add Item</button>
+      </section>
+      <section>
         <h3>Mains</h3>
         <ul>
-          <li>Kori Rotti <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Chicken Curry <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
-          <li>Mutton Gravy <span class="actions"><span class="edit">✏️</span><span class="delete">🗑️</span></span></li>
+          <li><span class="text">Kori Rotti</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Chicken Curry</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
+          <li><span class="text">Mutton Gravy</span><span class="icons"><span class="edit-btn">✏️</span><span class="delete-btn">🗑️</span></span></li>
         </ul>
-        <button onclick="addItem(this)">Add Item</button>
-      </div>
+        <button class="add-btn">Add Item</button>
+      </section>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener('click', function (e) {
+      const target = e.target;
+  
+      if (target.classList.contains('edit-btn')) {
+        const textSpan = target.closest('li').querySelector('.text');
+        textSpan.contentEditable = !textSpan.isContentEditable;
+        if (textSpan.isContentEditable) {
+          textSpan.focus();
+        }
+      }
+  
+      if (target.classList.contains('delete-btn')) {
+        const li = target.closest('li');
+        if (li) li.remove();
+      }
+  
+      if (target.classList.contains('add-btn')) {
+        const ul = target.previousElementSibling;
+        const newLi = document.createElement('li');
+        newLi.innerHTML = `
+          <span class="text">New Item</span>
+          <span class="icons">
+            <span class="edit-btn">✏️</span>
+            <span class="delete-btn">🗑️</span>
+          </span>
+        `;
+        ul.appendChild(newLi);
+      }
+    });
+  </script>
+
 </body>
 </html>
